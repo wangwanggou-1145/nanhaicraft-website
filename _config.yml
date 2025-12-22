@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: HRMTR官网
-subtitle: 欢迎来到HRMTR官网
-description: HRMTR官网
+title: 南海工艺官网
+subtitle: 欢迎来到南海工艺
+description: 南海工艺官网
 keywords:
 author: LeonMMcoset
 language: zh-CN
@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://hrmtr.top
+url: https://nanhaicraft.github.io/nanhaicraft-website/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
