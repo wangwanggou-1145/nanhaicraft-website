@@ -11,13 +11,13 @@
 # Docs: https://redefine-docs.ohevan.com/basic/info
 info:
   # Site title
-  title: HRMTR官网
+  title: 南海工艺官网
   # Site subtitle
-  subtitle: 新官网，新气象
+  subtitle: 在南海,共建美好
   # Author name
-  author: LeonMMcoset
+  author: 南海工艺
   # Site URL
-  url: https://hrmtr.top
+  url: https://nanhaicraft.github.io/nanhaicraft-website/
 # BASIC INFORMATION <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
 
@@ -89,7 +89,7 @@ global:
   # Whether to enable Preloader.
   preloader:
     enable: true
-    custom_message: 欢迎来到HRMTR
+    custom_message: 欢迎来到南海工艺
   # Whether to enable open graph
   open_graph:
     enable: true
@@ -128,10 +128,10 @@ home_banner:
     light: /screen.png # light mode
     dark: /screen2.png # dark mode
   # Home banner title
-  title: HRMTR官网
+  title: 南海工艺官网
   # Home banner subtitle
   subtitle:
-    text: ["新官网，新气象","旧的不去，新的不来","新官网By LeonMMcoset","HRMTR期待您的加入！"] # subtitle text, array
+    text: ["在南海,共建美好","新官网，新气象","特别鸣谢LeonMMcoset","南海工艺期待您的加入！"] # subtitle text, array
     hitokoto:  # 一言配置
       enable: false # Whether to enable hitokoto
       show_author: false # Whether to show author
