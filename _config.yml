@@ -7,13 +7,13 @@ title: 南海工艺官网
 subtitle: 欢迎来到南海工艺
 description: 南海工艺官网
 keywords:
-author: LeonMMcoset
+author: 南海工艺
 language: zh-CN
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://nanhaicraft.github.io/nanhaicraft-website/
+url: https://wangwanggou-1145.github.io/nanhaicraft-website/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
