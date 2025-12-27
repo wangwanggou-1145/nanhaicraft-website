@@ -125,8 +125,8 @@ home_banner:
   style: fixed # static or fixed
   # Home banner image
   image: 
-    light: /screen.png # light mode
-    dark: /screen2.png # dark mode
+    light: images/screen_light.png # light mode
+    dark: images/screen_dark.png # dark mode
   # Home banner title
   title: 南海工艺官网
   # Home banner subtitle
