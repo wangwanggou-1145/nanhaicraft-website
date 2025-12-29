@@ -10,7 +10,7 @@ const hexo_util_1 = require("hexo-util");
 function findConfigPath(path) {
     const { dir, name } = (0, path_1.parse)(path);
     return (0, hexo_fs_1.readdir)(dir).then(files => {
-        const item = files.find(item => item.startsWith(name));
+        const item = files.find(item => (0, path_1.basename)(item, (0, path_1.extname)(item)) === name);
         if (item != null)
             return (0, path_1.join)(dir, item);
     });

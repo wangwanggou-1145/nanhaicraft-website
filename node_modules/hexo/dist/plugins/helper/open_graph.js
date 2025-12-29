@@ -126,7 +126,7 @@ function openGraphHelper(options = {}) {
             keywords = [keywords];
         keywords.map(tag => {
             return tag.name ? tag.name : tag;
-        }).filter(Boolean).forEach(keyword => {
+        }).filter(Boolean).sort().forEach(keyword => {
             result += og('article:tag', keyword);
         });
     }

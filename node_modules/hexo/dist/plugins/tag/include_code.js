@@ -44,7 +44,7 @@ module.exports = (ctx) => function includeCodeTag(args) {
     code = lines.slice(from, to).join('\n').trim();
     // If the title is not defined, use file name instead
     const title = match[1] || (0, path_1.basename)(path);
-    const caption = `<span>${title}</span><a href="${hexo_util_1.url_for.call(ctx, doc.path)}">view raw</a>`;
+    const caption = (0, hexo_util_1.htmlTag)('span', {}, title) + `<a href="${hexo_util_1.url_for.call(ctx, doc.path)}">view raw</a>`;
     if (ctx.extend.highlight.query(ctx.config.syntax_highlighter)) {
         const options = {
             lang,

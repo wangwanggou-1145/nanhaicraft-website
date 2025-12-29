@@ -12,14 +12,10 @@ module.exports = (ctx) => {
         title: { type: String, default: '' },
         date: {
             type: moment_1.default,
-            default: moment_2.default,
-            language: ctx.config.languages,
-            timezone: ctx.config.timezone
+            default: moment_2.default
         },
         updated: {
-            type: moment_1.default,
-            language: ctx.config.languages,
-            timezone: ctx.config.timezone
+            type: moment_1.default
         },
         comments: { type: Boolean, default: true },
         layout: { type: String, default: 'page' },

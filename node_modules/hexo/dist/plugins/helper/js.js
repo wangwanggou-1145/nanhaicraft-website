@@ -17,11 +17,12 @@ function jsHelper(...args) {
             result += `<script src="${hexo_util_1.url_for.call(this, path)}"></script>\n`;
         }
         else {
+            const newItem = { ...item };
             // Custom attributes
-            item.src = hexo_util_1.url_for.call(this, item.src);
-            if (!item.src.endsWith('.js'))
-                item.src += '.js';
-            result += (0, hexo_util_1.htmlTag)('script', { ...item }, '') + '\n';
+            newItem.src = hexo_util_1.url_for.call(this, newItem.src);
+            if (!newItem.src.endsWith('.js'))
+                newItem.src += '.js';
+            result += (0, hexo_util_1.htmlTag)('script', newItem, '') + '\n';
         }
     });
     return result;

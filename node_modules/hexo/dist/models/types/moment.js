@@ -19,13 +19,7 @@ class SchemaTypeMoment extends warehouse_1.default.SchemaType {
         value = super.cast(value, data);
         if (value == null)
             return value;
-        const { options } = this;
-        value = toMoment(value);
-        if (options.language)
-            value = value.locale((0, date_1.toMomentLocale)(options.language));
-        if (options.timezone)
-            value = value.tz(options.timezone);
-        return value;
+        return toMoment(value);
     }
     validate(value, data) {
         value = super.validate(value, data);
@@ -37,7 +31,7 @@ class SchemaTypeMoment extends warehouse_1.default.SchemaType {
         }
         return value;
     }
-    match(value, query, data) {
+    match(value, query, _data) {
         return value ? value.valueOf() === query.valueOf() : false;
     }
     compare(a, b) {
@@ -54,25 +48,25 @@ class SchemaTypeMoment extends warehouse_1.default.SchemaType {
         if (value)
             return toMoment(value);
     }
-    value(value, data) {
+    value(value, _data) {
         // FIXME: Same as above. Also a dirty hack.
         return value ? value._d.toISOString() : value;
     }
-    q$day(value, query, data) {
+    q$day(value, query, _data) {
         return value ? value.date() === query : false;
     }
-    q$month(value, query, data) {
+    q$month(value, query, _data) {
         return value ? value.month() === query : false;
     }
-    q$year(value, query, data) {
+    q$year(value, query, _data) {
         return value ? value.year() === query : false;
     }
-    u$inc(value, update, data) {
+    u$inc(value, update, _data) {
         if (!value)
             return value;
         return value.add(update);
     }
-    u$dec(value, update, data) {
+    u$dec(value, update, _data) {
         if (!value)
             return value;
         return value.subtract(update);

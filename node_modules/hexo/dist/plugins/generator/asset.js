@@ -2,7 +2,6 @@
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 const hexo_fs_1 = require("hexo-fs");
 const bluebird_1 = __importDefault(require("bluebird"));
 const path_1 = require("path");

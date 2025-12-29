@@ -37,7 +37,6 @@ function deployConsole(args) {
             return;
         }
         this.log.info('Deploying: %s', (0, picocolors_1.magenta)(type));
-        // eslint-disable-next-line no-extra-parens
         return Reflect.apply(deployers[type], this, [{ ...item, ...args }]).then(() => {
             this.log.info('Deploy done: %s', (0, picocolors_1.magenta)(type));
         });

@@ -13,7 +13,7 @@ const validate_config_1 = __importDefault(require("./validate_config"));
 async function findConfigPath(path) {
     const { dir, name } = (0, path_1.parse)(path);
     const files = await (0, hexo_fs_1.readdir)(dir);
-    const item = files.find(item => item.startsWith(name));
+    const item = files.find(item => (0, path_1.basename)(item, (0, path_1.extname)(item)) === name);
     if (item != null)
         return (0, path_1.join)(dir, item);
 }

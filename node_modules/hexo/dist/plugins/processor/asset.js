@@ -13,7 +13,7 @@ function processPage(ctx, file) {
     const { path } = file;
     const doc = Page.findOne({ source: path });
     const { config } = ctx;
-    const { timezone: timezoneCfg } = config;
+    const { timezone } = config;
     const updated_option = config.updated_option;
     if (file.type === 'skip' && doc) {
         return;
@@ -34,16 +34,16 @@ function processPage(ctx, file) {
         data.raw = content;
         data.date = (0, common_1.toDate)(data.date);
         if (data.date) {
-            if (timezoneCfg)
-                data.date = (0, common_1.timezone)(data.date, timezoneCfg);
+            if (timezone)
+                data.date = (0, common_1.adjustDateForTimezone)(data.date, timezone);
         }
         else {
             data.date = stats.ctime;
         }
         data.updated = (0, common_1.toDate)(data.updated);
         if (data.updated) {
-            if (timezoneCfg)
-                data.updated = (0, common_1.timezone)(data.updated, timezoneCfg);
+            if (timezone)
+                data.updated = (0, common_1.adjustDateForTimezone)(data.updated, timezone);
         }
         else if (updated_option === 'date') {
             data.updated = data.date;

@@ -17,11 +17,15 @@ function cssHelper(...args) {
             result += `<link rel="stylesheet" href="${hexo_util_1.url_for.call(this, path)}">\n`;
         }
         else {
+            const newItem = {
+                rel: 'stylesheet',
+                ...item
+            };
             // Custom attributes
-            item.href = hexo_util_1.url_for.call(this, item.href);
-            if (!item.href.endsWith('.css'))
-                item.href += '.css';
-            result += (0, hexo_util_1.htmlTag)('link', { rel: 'stylesheet', ...item }) + '\n';
+            newItem.href = hexo_util_1.url_for.call(this, newItem.href);
+            if (!newItem.href.endsWith('.css'))
+                newItem.href += '.css';
+            result += (0, hexo_util_1.htmlTag)('link', newItem) + '\n';
         }
     });
     return result;

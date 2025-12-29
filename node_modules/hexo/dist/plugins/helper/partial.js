@@ -8,7 +8,7 @@ module.exports = (ctx) => function partial(name, locals, options = {}) {
     const currentView = this.filename.substring(viewDir.length);
     const path = (0, path_1.join)((0, path_1.dirname)(currentView), name);
     const view = ctx.theme.getView(path) || ctx.theme.getView(name);
-    const viewLocals = { layout: false };
+    const viewLocals = {};
     if (!view) {
         throw new Error(`Partial ${name} does not exist. (in ${currentView})`);
     }
