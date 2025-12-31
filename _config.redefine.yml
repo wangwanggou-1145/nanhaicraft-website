@@ -200,10 +200,10 @@ navbar:
       path: / 
       icon: fa-regular fa-house # can be empty
     教程:
-      path: /2025/02/10/hello-world/
+      path: /2025/12/31/join-server/
       icon: fa-regular fa-book
     文档:
-      path: /2025/02/10/files/
+      path: /2025/12/31/files/
       icon: fa-regular fa-file
     归档: 
       path: /archives 
